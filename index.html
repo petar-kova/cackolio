@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personalizirane karte i tiskovine za posebne trenutke. Unikatni dizajn, vrhunski tisak i brza dostava." />
+  <title>Studio Tiskovina | Personalizirane karte i tiskovine</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__spinner"></div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#pocetna" class="logo" aria-label="Studio Tiskovina početna">Studio Tiskovina</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Otvori navigaciju" aria-expanded="false">☰</button>
+      <nav class="nav" id="nav">
+        <a href="#pocetna">Početna</a>
+        <a href="#ponuda">Proizvodi</a>
+        <a href="#onama">O nama</a>
+        <a href="#blog">Blog</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a href="#kontakt" class="btn btn--small">Zatraži ponudu</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="pocetna">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content reveal">
+        <h1>Personalizirane karte i tiskovine za posebne trenutke</h1>
+        <p>Unikatni dizajn, vrhunska kvaliteta tiska i podrška od ideje do isporuke.</p>
+        <div class="hero__actions">
+          <a href="#ponuda" class="btn">Pregled ponude</a>
+          <a href="#kontakt" class="btn btn--outline">Kontakt</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prednosti">
+      <div class="container">
+        <h2 class="section__title reveal">Zašto odabrati nas?</h2>
+        <div class="grid grid--4">
+          <article class="card reveal">
+            <span class="icon" aria-hidden="true">✔</span>
+            <h3>Kvalitetni materijali</h3>
+            <p>Koristimo premium papir i provjerene tehnike završne obrade.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon" aria-hidden="true">⚡</span>
+            <h3>Brza dostava</h3>
+            <p>Efikasna proizvodnja i pouzdana isporuka na vrijeme.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon" aria-hidden="true">🎨</span>
+            <h3>Potpuna personalizacija</h3>
+            <p>Svaki dizajn prilagođavamo vašem događaju i stilu.</p>
+          </article>
+          <article class="card reveal">
+            <span class="icon" aria-hidden="true">🏆</span>
+            <h3>Iskustvo i povjerenje</h3>
+            <p>Dugogodišnje iskustvo i stotine zadovoljnih klijenata.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="ponuda">
+      <div class="container">
+        <h2 class="section__title reveal">Proizvodi i usluge</h2>
+        <div class="filters reveal">
+          <button class="chip chip--active" data-filter="all">Sve</button>
+          <button class="chip" data-filter="vjenčanja">Vjenčanja</button>
+          <button class="chip" data-filter="rođendani">Rođendani</button>
+          <button class="chip" data-filter="biznis">Biznis</button>
+        </div>
+        <div class="grid grid--3" id="productsGrid">
+          <article class="product reveal" data-category="vjenčanja">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1529634893310-7f4f713a8f95?auto=format&fit=crop&w=900&q=80" alt="Elegantne pozivnice za vjenčanje" />
+            <h3>Pozivnice za vjenčanje</h3>
+            <p>Elegantne serije pozivnica s personaliziranim detaljima.</p>
+            <a href="#kontakt" class="btn btn--small">Saznaj više</a>
+          </article>
+          <article class="product reveal" data-category="rođendani">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=900&q=80" alt="Kreativne rođendanske kartice" />
+            <h3>Rođendanske kartice</h3>
+            <p>Vesele i moderne kartice za djecu i odrasle.</p>
+            <a href="#kontakt" class="btn btn--small">Saznaj više</a>
+          </article>
+          <article class="product reveal" data-category="biznis">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Posjetnice i promo materijali" />
+            <h3>Posjetnice i promo tisak</h3>
+            <p>Profesionalni materijali za jačanje vašeg brenda.</p>
+            <a href="#kontakt" class="btn btn--small">Saznaj više</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="onama">
+      <div class="container about">
+        <img class="about__image reveal" loading="lazy" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Tim koji dizajnira personalizirane tiskovine" />
+        <div class="about__content reveal">
+          <h2>Priča našeg brenda</h2>
+          <p>Vjerujemo da svaki važan trenutak zaslužuje jedinstven dizajn. Spajamo kreativnost i vrhunski tisak kako bismo vašim događajima dali osobni pečat.</p>
+          <div class="counters">
+            <div><strong>12+</strong><span>godina iskustva</span></div>
+            <div><strong>2.500+</strong><span>klijenata</span></div>
+            <div><strong>10.000+</strong><span>izrađenih narudžbi</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="recenzije">
+      <div class="container">
+        <h2 class="section__title reveal">Recenzije klijenata</h2>
+        <div class="testimonials reveal" id="testimonials">
+          <article class="testimonial testimonial--active">
+            <p>★★★★★</p>
+            <blockquote>“Sve je bilo savršeno od dizajna do isporuke. Topla preporuka!”</blockquote>
+            <span>— Ana K.</span>
+          </article>
+          <article class="testimonial">
+            <p>★★★★★</p>
+            <blockquote>“Brzi, profesionalni i vrlo kreativni. Pozivnice su oduševile goste.”</blockquote>
+            <span>— Marko P.</span>
+          </article>
+          <article class="testimonial">
+            <p>★★★★★</p>
+            <blockquote>“Odlična komunikacija i vrhunska kvaliteta papira. Ponovno naručujemo.”</blockquote>
+            <span>— Petra M.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galerija">
+      <div class="container">
+        <h2 class="section__title reveal">Galerija radova</h2>
+        <div class="gallery">
+          <img class="reveal" loading="lazy" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=700&q=80" alt="Galerija personaliziranih pozivnica" />
+          <img class="reveal" loading="lazy" src="https://images.unsplash.com/photo-1519750783826-e2420f4d687f?auto=format&fit=crop&w=700&q=80" alt="Pakiranje i završna obrada tiskovina" />
+          <img class="reveal" loading="lazy" src="https://images.unsplash.com/photo-1555421689-3f034debb7a6?auto=format&fit=crop&w=700&q=80" alt="Kreativni studio za dizajn tiska" />
+          <img class="reveal" loading="lazy" src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=700&q=80" alt="Primjeri kartica i zahvalnica" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" id="kontakt">
+      <div class="container reveal">
+        <h2>Spremni za svoju personaliziranu narudžbu?</h2>
+        <a href="mailto:info@studiotiskovina.hr" class="btn">Kontaktirajte nas</a>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="blog">
+      <div class="container reveal">
+        <h2 class="section__title">Blog</h2>
+        <p class="blog-placeholder">Objave s idejama i savjetima uskoro dolaze.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <h3>Studio Tiskovina</h3>
+        <p>Unikatne tiskovine za trenutke koji se pamte.</p>
+      </div>
+      <div>
+        <h4>Brzi linkovi</h4>
+        <ul>
+          <li><a href="#ponuda">Proizvodi</a></li>
+          <li><a href="#onama">O nama</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <p>info@studiotiskovina.hr</p>
+        <p>+385 1 2345 678</p>
+        <p>Pon–Pet: 09:00–17:00</p>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <form>
+          <label for="newsletter" class="sr-only">Email adresa</label>
+          <input id="newsletter" type="email" placeholder="Vaš email" />
+          <button type="submit" class="btn btn--small">Prijava</button>
+        </form>
+      </div>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Studio Tiskovina. Sva prava pridržana.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
