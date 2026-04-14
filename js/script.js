@@ -3,6 +3,11 @@ const menuToggle = document.getElementById('menuToggle');
 const nav = document.getElementById('nav');
 const loader = document.getElementById('loader');
 const year = document.getElementById('year');
+const cookieBanner = document.getElementById('cookieBanner');
+const acceptCookies = document.getElementById('acceptCookies');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const lightboxClose = document.getElementById('lightboxClose');
 
 window.addEventListener('load', () => {
   loader.classList.add('loader--hidden');
@@ -57,4 +62,35 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+document.querySelectorAll('.gallery__item').forEach((item) => {
+  item.addEventListener('click', () => {
+    lightboxImage.src = item.dataset.lightbox;
+    lightbox.classList.add('lightbox--open');
+    lightbox.setAttribute('aria-hidden', 'false');
+  });
+});
+
+const closeLightbox = () => {
+  lightbox.classList.remove('lightbox--open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightboxImage.src = '';
+};
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (event) => {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+if (!localStorage.getItem('cookiesAccepted')) {
+  cookieBanner.classList.add('cookie-banner--show');
+}
+
+acceptCookies.addEventListener('click', () => {
+  localStorage.setItem('cookiesAccepted', 'true');
+  cookieBanner.classList.remove('cookie-banner--show');
+});
+
 year.textContent = new Date().getFullYear();
